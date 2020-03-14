@@ -18,57 +18,57 @@ import Link from '@ckeditor/ckeditor5-link/src/link';
 import List from '@ckeditor/ckeditor5-list/src/list';
 import Paragraph from '@ckeditor/ckeditor5-paragraph/src/paragraph';
 
-import Alignment from '@ckeditor/ckeditor5-alignment/src/alignment';     // <--- ADDED
+import Alignment from '@ckeditor/ckeditor5-alignment/src/alignment';
 
-export default class ClassicEditor extends ClassicEditorBase {}
+export default class ClassicEditor extends ClassicEditorBase { }
 
 // Plugins to include in the build.
 ClassicEditor.builtinPlugins = [
-    Essentials,
-    UploadAdapter,
-    Autoformat,
-    Bold,
-    Italic,
-    BlockQuote,
-    EasyImage,
-    Heading,
-    Image,
-    ImageCaption,
-    ImageStyle,
-    ImageToolbar,
-    ImageUpload,
-    Link,
-    List,
-    Paragraph,
-    Alignment                                                            // <--- ADDED
+	Essentials,
+	UploadAdapter,
+	Autoformat,
+	Bold,
+	Italic,
+	BlockQuote,
+	EasyImage,
+	Heading,
+	Image,
+	ImageCaption,
+	ImageStyle,
+	ImageToolbar,
+	ImageUpload,
+	Link,
+	List,
+	Paragraph,
+	Alignment
 ];
 
 // Editor configuration.
 ClassicEditor.defaultConfig = {
-    toolbar: {
-        items: [
-            'heading',
-            '|',
-            'alignment',                                                 // <--- ADDED
-            'bold',
-            'italic',
-            'link',
-            'bulletedList',
-            'numberedList',
-            'imageUpload',
-            'blockQuote',
-            'undo',
-            'redo'
-        ]
-    },
-    image: {
-        toolbar: [
-            'imageStyle:full',
-            'imageStyle:side',
-            '|',
-            'imageTextAlternative'
-        ]
-    },
-    // This value must be kept in sync with the language defined in webpack.config.js.
-    language: 'en'
+	toolbar: {
+		items: [
+			'heading',
+			'|',
+			'alignment',
+			'bold',
+			'italic',
+			'link',
+			'bulletedList',
+			'numberedList',
+			'imageUpload',
+			'blockQuote',
+			'undo',
+			'redo'
+		]
+	},
+	image: {
+		toolbar: [
+			'imageStyle:full',
+			'imageStyle:side',
+			'|',
+			'imageTextAlternative'
+		]
+	},
+	// This value must be kept in sync with the language defined in webpack.config.js.
+	language: 'en'
 };
